@@ -13,7 +13,7 @@ public class Dulicatelead {
 		d.get("http://leaftaps.com/opentaps/control/main");
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		d.findElementById("username").sendKeys("Democsr");
+		d.findElementById("username").sendKeys("Demosalesmanager");
 		d.findElementById("password").sendKeys("crmsfa");
 		d.findElementByClassName("decorativeSubmit").click();
 
@@ -24,9 +24,9 @@ public class Dulicatelead {
 		d.findElementByXPath("//input[@name='emailAddress']").sendKeys("xxx@gmail.com");
 		d.findElementByXPath("//button[text()='Find Leads']").click();
 		
-		String text = d.findElementByXPath("(//a[@href='/crmsfa/control/viewLead?partyId=10321'])[5]").getAttribute("value");
-		//String text = d.findElementByXPath("//a[@id='ext-gen848']").getAttribute("value");
-		System.out.println(text);
+		Thread.sleep(5000);
+		String id = d.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-firstName']//a)[1]").getText();
+				System.out.println(id);
 
 		d.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-firstName']//a)[1]").click();
 		
@@ -37,7 +37,7 @@ public class Dulicatelead {
 		//String plinktext = d.findElementByPartialLinkText("Duplicate Lead").getText();
 		if(title.contains("Duplicate Lead"))
 		{
-			System.out.println("conains");
+			System.out.println("contains");
 		}
 		else
 		{
@@ -45,22 +45,13 @@ public class Dulicatelead {
 		}
 		d.findElementByXPath("//input[@value='Create Lead']").click();
 		
+		String duplicatetext = d.findElementById("viewLead_firstName_sp").getText();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		if(id.equals(duplicatetext))
+		{
+			System.out.println("first name is duplicate");
+		}
+			
+		d.close();
 	}
 }

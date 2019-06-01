@@ -1,20 +1,13 @@
-package Lead;
+package TestNgProject;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
-public class EditLead {
+public class EditLead extends ProjectBase {
+@Test
+public void editLead() throws InterruptedException {
 
-public static void main(String[] args) throws InterruptedException {
-	System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
-ChromeDriver d = new ChromeDriver();
-d.get("http://leaftaps.com/opentaps/control/main");
-d.manage().window().maximize();
-
-d.findElementById("username").sendKeys("Demosalesmanager");
-d.findElementById("password").sendKeys("crmsfa");
-d.findElementByClassName("decorativeSubmit").click();
-
-d.findElementByLinkText("CRM/SFA").click();
 d.findElementByLinkText("Leads").click();
 d.findElementByLinkText("Find Leads").click();
 d.findElementByXPath("//div[@class='x-tab-panel-bwrap']//div[2]//input").sendKeys("gnana");
@@ -49,7 +42,7 @@ else
 {
 	System.out.println("not changed");
 }
-d.close();		
+		
 	}
 
 }

@@ -1,26 +1,18 @@
-package Lead;
+package TestNgProject;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
-public class CreateLead {
-
-	public static void main(String[] args) {
-		
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		ChromeDriver d = new ChromeDriver();
-		d.get("http://leaftaps.com/opentaps/");
-		d.manage().window().maximize();
-
-		d.findElementById("username").sendKeys("demosalesmanager");
-		d.findElementById("password").sendKeys("crmsfa");
-		d.findElementByClassName("decorativeSubmit").click();
-		
-		d.findElementByLinkText("CRM/SFA").click();
-		
-		d.findElementByLinkText("Create Lead").click();
-		
+public class CreateLead extends ProjectBase {
+@Test
+	public void createLead()
+	{
+		System.out.println("1");
+		d.findElementByLinkText("Create Lead").click();		
 		d.findElementById("createLeadForm_companyName").sendKeys("ameex");
 		d.findElementById("createLeadForm_firstName").sendKeys("gnana");
 		d.findElementById("createLeadForm_lastName").sendKeys("sekar");
@@ -92,6 +84,6 @@ public class CreateLead {
 		{
 			System.out.println("sekar");
 		}
-	d.close();
+
 	}
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="2" verbose="5" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="TestNgProject.DeleteLead">
+        <methods>
+          <include name="close"/>
+          <include name="launchApp"/>
+          <include name="deleteLead"/>
+        </methods>
+      </class> <!-- TestNgProject.DeleteLead -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

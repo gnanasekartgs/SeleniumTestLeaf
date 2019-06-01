@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="196179" started-at="2019-06-01T07:03:27Z" finished-at="2019-06-01T07:06:43Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="196179" started-at="2019-06-01T07:03:27Z" finished-at="2019-06-01T07:06:43Z">
+      <class name="TestNgProject.DeleteLead">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:TestNgProject.DeleteLead@3abbfa04]" name="launchApp" is-config="true" duration-ms="72173" started-at="2019-06-01T07:04:53Z" finished-at="2019-06-01T07:06:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="deleteLead()[pri:0, instance:TestNgProject.DeleteLead@3abbfa04]" name="deleteLead" duration-ms="36378" started-at="2019-06-01T07:06:05Z" depends-on-methods="TestNgProject.CreateLead.createLead" finished-at="2019-06-01T07:06:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLead -->
+        <test-method status="PASS" signature="close()[pri:0, instance:TestNgProject.DeleteLead@3abbfa04]" name="close" is-config="true" duration-ms="2100" started-at="2019-06-01T07:06:41Z" finished-at="2019-06-01T07:06:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- TestNgProject.DeleteLead -->
+      <class name="TestNgProject.CreateLead">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:TestNgProject.CreateLead@239963d8]" name="launchApp" is-config="true" duration-ms="61971" started-at="2019-06-01T07:03:27Z" finished-at="2019-06-01T07:04:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="createLead()[pri:0, instance:TestNgProject.CreateLead@239963d8]" name="createLead" duration-ms="21178" started-at="2019-06-01T07:04:29Z" finished-at="2019-06-01T07:04:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="close()[pri:0, instance:TestNgProject.CreateLead@239963d8]" name="close" is-config="true" duration-ms="2318" started-at="2019-06-01T07:04:50Z" finished-at="2019-06-01T07:04:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- TestNgProject.CreateLead -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
