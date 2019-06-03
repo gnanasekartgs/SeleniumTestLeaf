@@ -1,4 +1,5 @@
-package Lead;
+package TestNgProject;
+import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -7,23 +8,17 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-public class Merge1 {
+public class Merge1 extends ProjectBase{
 
-public static void main(String[] args) throws InterruptedException {
-System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-ChromeDriver d = new ChromeDriver();
-d.get("http://leaftaps.com/opentaps/control/main");
-d.manage().window().maximize();
-d.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+@Test(dependsOnMethods= {"TestNgProject.Dulicatelead.duplicateLead"}, alwaysRun=true)
 
-d.findElementById("username").sendKeys("demosalesmanager");
-d.findElementById("password").sendKeys("crmsfa");
-d.findElementByClassName("decorativeSubmit").click();
-d.findElementByXPath("//div[@class='crmsfa']").click();	
+public void mergeLead() throws InterruptedException {
+	
+	System.out.println("4");	
 d.findElementByLinkText("Leads").click();
 d.findElementByLinkText("Merge Leads").click();
-
 
 d.findElementByXPath("(//form[@action='mergeLeads']//img)[2]").click();
 
@@ -42,15 +37,15 @@ d.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-firstName'])
 //d.findElementByXPath("(//form[@action='mergeLeads']//img)[2]").click();
 //d.findElementByXPath("//span[text()='To Lead']/following::img[1]").click();
 
-//d.switchTo().defaultContent();
-d.switchTo().window(whs.get(0));
+d.switchTo().defaultContent();
 
-//Actions action = new Actions(d);
-//WebElement element = d.findElementByXPath("(//form[@action='mergeLeads']//img)[1]");
-////action.contextClick(element);
-//action.doubleClick();
+Actions action = new Actions(d);
+WebElement element = d.findElementByXPath("(//form[@action='mergeLeads']//img)[1]");
+//action.contextClick(element);
+action.doubleClick();
 
-d.findElementByXPath("//span[text()= 'From Lead']/following::a[1]").click();
+//span[text()= 'From Lead']/following::a[1]
+
 
 Set<String> windowHandles1 = d.getWindowHandles();
 List<String> whs1 = new ArrayList<>();
@@ -66,8 +61,7 @@ d.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-firstName'])
 
 String title = d.getTitle();
 String id1 = null,id2;
-//if(title.equals("Merge Leads | opentaps CRM"))
-if(title.contains("Merge Leads "))
+if(title.equals("Merge Leads | opentaps CRM"))
 {
 id1 = d.findElementByXPath("(//input[@class='XdijitInputField dijitInputFieldValidationNormal'])[1]").getText();
 id2 = d.findElementByXPath("(//input[@class='XdijitInputField dijitInputFieldValidationNormal'])[2]").getText();

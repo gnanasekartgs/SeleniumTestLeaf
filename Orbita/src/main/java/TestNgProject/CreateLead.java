@@ -1,6 +1,10 @@
 package TestNgProject;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,14 +12,21 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class CreateLead extends ProjectBase {
-@Test
-	public void createLead()
+	@BeforeTest
+	public void setData()
+	{
+		excelfilename="TC001_Createlead.xlsx";
+	}
+	
+	
+@Test(dataProvider="fetchdata")
+	public void createLead(String cname, String fname, String lname)
 	{
 		System.out.println("1");
 		d.findElementByLinkText("Create Lead").click();		
-		d.findElementById("createLeadForm_companyName").sendKeys("ameex");
-		d.findElementById("createLeadForm_firstName").sendKeys("gnana");
-		d.findElementById("createLeadForm_lastName").sendKeys("sekar");
+		d.findElementById("createLeadForm_companyName").sendKeys(cname);
+		d.findElementById("createLeadForm_firstName").sendKeys(fname);
+		d.findElementById("createLeadForm_lastName").sendKeys(lname);
 		d.findElementByName("firstNameLocal").sendKeys("gnanasekar");
 		d.findElementByName("lastNameLocal").sendKeys("T");
 		d.findElementByName("personalTitle").sendKeys("MR");
@@ -75,15 +86,36 @@ public class CreateLead extends ProjectBase {
 		d.findElementById("createLeadForm_primaryEmail").sendKeys("xxx@gmail.com");
 		d.findElementByXPath("//input[@class='smallSubmit']").click();
 		
-		String fname = d.findElementByXPath("//span[text()='First name']//following::span[1]").getText();
-		if(fname.equals("gnana"))
+		String fname1 = d.findElementByXPath("//span[text()='First name']//following::span[1]").getText();
+		if(fname1.equals("gnana"))
 		{		
-		System.out.println(fname);
+		System.out.println(fname1);
 		}
 		else
 		{
 			System.out.println("sekar");
 		}
-
+		
 	}
+
+//
+//@DataProvider(name="fetchdata")
+//public String[][] sendData()
+//{
+//	String[][] data = new String[3][3];
+//	
+//	data[0][0] = "testleaf";
+//	data[0][1] = "gnana";
+//	data[0][2] = "t";
+//	
+//	data[1][0] = "testleaf";
+//	data[1][1] = "sekar";
+//	data[1][2] = "t";
+//	
+//	data[2][0] = "testleaf";
+//	data[2][1] = "tgs";
+//	data[2][2] = "t";
+//	
+//	return data;
+
 }

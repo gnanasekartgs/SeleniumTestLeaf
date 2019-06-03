@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]" parallel="classes">
-  <test thread-count="2" verbose="5" name="Test(failed)" parallel="classes">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]">
+  <parameter name="password" value="crmsfa"/>
+  <parameter name="username" value="dmosalesmanager"/>
+  <test thread-count="5" verbose="5" name="Test(failed)">
     <classes>
-      <class name="TestNgProject.DeleteLead">
+      <class name="TestNgProject.CreateLead">
         <methods>
           <include name="close"/>
           <include name="launchApp"/>
-          <include name="deleteLead"/>
+          <include name="createLead"/>
         </methods>
-      </class> <!-- TestNgProject.DeleteLead -->
+      </class> <!-- TestNgProject.CreateLead -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

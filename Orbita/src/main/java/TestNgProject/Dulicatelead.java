@@ -1,27 +1,23 @@
-package Lead;
+package TestNgProject;
 
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
-public class Dulicatelead {
+public class Dulicatelead extends ProjectBase {
 
-	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
-		ChromeDriver d = new ChromeDriver();
-		d.get("http://leaftaps.com/opentaps/control/main");
-		d.manage().window().maximize();
-		d.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		d.findElementById("username").sendKeys("Demosalesmanager");
-		d.findElementById("password").sendKeys("crmsfa");
-		d.findElementByClassName("decorativeSubmit").click();
+@Test(dependsOnMethods= {"TestNgProject.EditLead.editLead"}, alwaysRun=true)
 
-		d.findElementByLinkText("CRM/SFA").click();
+	public void duplicateLead() throws InterruptedException {
+	
+		System.out.println("3");
 		d.findElementByLinkText("Leads").click();
 		d.findElementByLinkText("Find Leads").click();
 		d.findElementByXPath("//span[text()='Email']").click();
-		d.findElementByXPath("//input[@name='emailAddress']").sendKeys("xxx1@gmail.com");
+		d.findElementByXPath("//input[@name='emailAddress']").sendKeys("xxx@gmail.com");
 		d.findElementByXPath("//button[text()='Find Leads']").click();
 		
 		Thread.sleep(5000);
@@ -51,7 +47,5 @@ public class Dulicatelead {
 		{
 			System.out.println("first name is duplicate");
 		}
-			
-		d.close();
 	}
 }

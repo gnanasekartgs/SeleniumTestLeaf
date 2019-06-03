@@ -1,6 +1,7 @@
 package TestNgProject;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -9,10 +10,10 @@ import org.testng.annotations.Test;
 
 public class DeleteLead extends ProjectBase {
 	
-@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
+@Test(dependsOnMethods= {"TestNgProject.Merge1.mergeLead"}, alwaysRun=true)
 
 public void deleteLead() throws InterruptedException {
-System.out.println("2");
+System.out.println("5");
 d.findElementByLinkText("Leads").click();
 d.findElementByXPath("//a[text()='Find Leads']").click();
 d.findElementByXPath("(//span[@class='x-tab-strip-text '])[2]").click();

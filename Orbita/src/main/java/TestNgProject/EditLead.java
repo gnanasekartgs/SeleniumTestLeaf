@@ -1,13 +1,17 @@
 package TestNgProject;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class EditLead extends ProjectBase {
-@Test
-public void editLead() throws InterruptedException {
 
+@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
+
+public void editLead() throws InterruptedException {
+	
+	System.out.println("2");
 d.findElementByLinkText("Leads").click();
 d.findElementByLinkText("Find Leads").click();
 d.findElementByXPath("//div[@class='x-tab-panel-bwrap']//div[2]//input").sendKeys("gnana");
