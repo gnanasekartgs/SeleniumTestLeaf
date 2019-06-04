@@ -27,8 +27,8 @@ driver.findElementByXPath("(//label[text()='Phone Number:'])[4]/following::input
 driver.findElementByXPath("//button[text()= 'Find Leads']").click();
 
 
-WebElement value = driver.findElementByXPath("(//div[@class='x-grid3-row   '])[1]//tr[1]/td[1]//a");
-System.out.println(value.getAttribute("value"));
+String value = driver.findElementByXPath("(//div[@class='x-grid3-row   '])[1]//tr[1]/td[1]//a").getText();
+System.out.println(value);
  
 //String text = driver.findElementByXPath("(//div[@class='x-grid3-row   '])[1]//tr[1]/td[1]//a").getAttribute("value");
 //int id = Integer.parseInt(text);

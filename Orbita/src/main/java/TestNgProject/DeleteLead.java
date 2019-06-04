@@ -2,6 +2,7 @@ package TestNgProject;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -26,15 +27,9 @@ d.findElementByXPath("//button[text()= 'Find Leads']").click();
 WebElement value = d.findElementByXPath("(//div[@class='x-grid3-row   '])[1]//tr[1]/td[1]//a");
 System.out.println(value.getAttribute("value"));
  
-//String text = driver.findElementByXPath("(//div[@class='x-grid3-row   '])[1]//tr[1]/td[1]//a").getAttribute("value");
-//int id = Integer.parseInt(text);
-//System.out.println(id);
-
 Thread.sleep(5000);
-//driver.findElementByXPath("(//a[@href='/crmsfa/control/viewLead?partyId=10040'])[1]").click();
-d.findElementByXPath("(//a[@class='linktext'])[4]").click();
 
-//
+d.findElementByXPath("(//a[@class='linktext'])[4]").click();
 
 WebElement delete = d.findElementByLinkText("Delete");
 if(delete.isDisplayed() || delete.isEnabled() || delete.isSelected())
@@ -47,8 +42,6 @@ else
 }
 
 d.findElementByLinkText("Find Leads").click();
-		
-//d.findElementByXPath("//label[text()='Lead ID:']/following::input[1]").sendKeys("10040");
 
 d.findElementByXPath("(//input[@name='firstName'])[3]").sendKeys("gnana");
 d.findElementByXPath("//button[text()= 'Find Leads']").click();

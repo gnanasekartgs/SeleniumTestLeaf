@@ -1,6 +1,7 @@
 package TestNgProject;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,11 +16,9 @@ public class CreateLead extends ProjectBase {
 	@BeforeTest
 	public void setData()
 	{
-		excelfilename="TC001_Createlead.xlsx";
+		excelfilename="TC001_Createlead";
 	}
-	
-	
-@Test(dataProvider="fetchdata")
+@Test(dataProvider="fetchData")
 	public void createLead(String cname, String fname, String lname)
 	{
 		System.out.println("1");
