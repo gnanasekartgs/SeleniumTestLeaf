@@ -19,13 +19,13 @@ public class CreateLead extends ProjectBase {
 		excelfilename="TC001_Createlead";
 	}
 @Test(dataProvider="fetchData")
-	public void createLead(String cname, String fname, String lname)
+	public void createLead(String cname, String fname, String lastname)
 	{
 		System.out.println("1");
 		d.findElementByLinkText("Create Lead").click();		
 		d.findElementById("createLeadForm_companyName").sendKeys(cname);
 		d.findElementById("createLeadForm_firstName").sendKeys(fname);
-		d.findElementById("createLeadForm_lastName").sendKeys(lname);
+		d.findElementById("createLeadForm_lastName").sendKeys((String) lastname);
 		d.findElementByName("firstNameLocal").sendKeys("gnanasekar");
 		d.findElementByName("lastNameLocal").sendKeys("T");
 		d.findElementByName("personalTitle").sendKeys("MR");

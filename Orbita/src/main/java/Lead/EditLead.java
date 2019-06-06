@@ -1,11 +1,13 @@
 package Lead;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class EditLead {
-
+	@Test(dataProvider="fetchData")
 public static void main(String[] args) throws InterruptedException {
-	System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+	
+System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 ChromeDriver d = new ChromeDriver();
 d.get("http://leaftaps.com/opentaps/control/main");
 d.manage().window().maximize();

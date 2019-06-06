@@ -34,8 +34,15 @@ public class ProjectBase {
 @DataProvider(name="fetchData")
 public String[][] sendData() throws IOException
 {
-	
 	Excel excel = new Excel();
 	return excel.excelRead(excelfilename);
 }
+
+@DataProvider(name="newCompanyName") 
+String[][] companyName1() throws IOException
+{
+	Excel excel = new Excel();
+	return excel.companyName(excelfilename);
 }
+}
+

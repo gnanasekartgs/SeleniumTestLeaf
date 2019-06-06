@@ -1,4 +1,5 @@
 package TestNgProject;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -9,8 +10,13 @@ import org.testng.annotations.Test;
 public class EditLead extends ProjectBase {
 
 @Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
-
-public void editLead() throws InterruptedException {
+@BeforeTest
+public void setData()
+{
+	excelfilename="TC001_Createlead";
+}
+@Test(dataProvider="newCompanyName")
+public void editLead(String cname) throws InterruptedException {
 	
 	System.out.println("2");
 d.findElementByLinkText("Leads").click();
@@ -33,7 +39,7 @@ else
 }
 d.findElementByXPath("//div[@class='frameSectionExtra']//a[3]").click();
 d.findElementById("updateLeadForm_companyName").clear();
-d.findElementById("updateLeadForm_companyName").sendKeys("Ameexusa");
+d.findElementById("updateLeadForm_companyName").sendKeys(cname);
 d.findElementByXPath("//input[@value='Update']").click();
 WebElement cn = d.findElementById("viewLead_companyName_sp");
 String attr = cn.getText();

@@ -38,17 +38,38 @@ public class Excel {
 	}
 		return data;
 	}
-		String[][] companyRead(String excelfilename1) throws IOException
+		String[][] companyRead(String excelfilename) throws IOException
 		{
-		XSSFWorkbook xwbook = new XSSFWorkbook("./testDate/"+excelfilename1+".xlsx");
+		XSSFWorkbook xwbook = new XSSFWorkbook("./testDate/"+excelfilename+".xlsx");
 		
 		XSSFSheet cname = xwbook.getSheet("Sheet1");
 		int cnamerow = cname.getLastRowNum();
 		short cnamecell = cname.getRow(0).getLastCellNum();
 		
 		String [][] name = new String[cnamerow][cnamecell];
-		return name;
-		
-		
+		return name;	
 	}
+		public String[][] companyName(String excelfilename) throws IOException
+		{
+			XSSFWorkbook xwbook = new XSSFWorkbook("./testDate/"+excelfilename+".xlsx");
+			XSSFSheet sheetAt = xwbook.getSheetAt(0);
+			XSSFRow row = sheetAt.getRow(1);
+			int rownum = row.getRowNum();
+			System.out.println(rownum);
+			XSSFCell cell = row.getCell(3);
+			
+			double cellnum = (int) cell.getNumericCellValue();
+			System.out.println(cellnum);
+			
+			String newvalue = cell.getStringCellValue();
+			System.out.println("New Company name" +newvalue);
+			cell.setCellValue(newvalue);
+			
+			String[][] data = new String[rownum][(int) cellnum];
+			data[rownum][(int) cellnum] = newvalue;
+			return data;
+			
+			
+			
+		}
 }

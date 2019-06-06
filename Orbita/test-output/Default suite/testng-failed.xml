@@ -3,34 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNgProject.Merge1">
-        <methods>
-          <include name="mergeLead"/>
-          <include name="close"/>
-          <include name="launchApp"/>
-        </methods>
-      </class> <!-- TestNgProject.Merge1 -->
       <class name="TestNgProject.CreateLead">
         <methods>
           <include name="close"/>
+          <include name="setData"/>
           <include name="launchApp"/>
           <include name="createLead"/>
         </methods>
       </class> <!-- TestNgProject.CreateLead -->
-      <class name="TestNgProject.EditLead">
-        <methods>
-          <include name="close"/>
-          <include name="editLead"/>
-          <include name="launchApp"/>
-        </methods>
-      </class> <!-- TestNgProject.EditLead -->
-      <class name="TestNgProject.Dulicatelead">
-        <methods>
-          <include name="close"/>
-          <include name="duplicateLead"/>
-          <include name="launchApp"/>
-        </methods>
-      </class> <!-- TestNgProject.Dulicatelead -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
