@@ -5,14 +5,14 @@
   <parameter name="username" value="demosalesmanager"/>
   <test thread-count="5" verbose="5" name="Test(failed)">
     <classes>
-      <class name="TestNgDemo.CreateLead">
+      <class name="TestNgDemo.EditLead">
         <methods>
-          <include name="setData"/>
           <include name="launchApp"/>
-          <include name="createLead"/>
           <include name="close"/>
+          <include name="editLead"/>
+          <include name="setData"/>
         </methods>
-      </class> <!-- TestNgDemo.CreateLead -->
+      </class> <!-- TestNgDemo.EditLead -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
