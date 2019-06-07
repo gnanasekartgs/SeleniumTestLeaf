@@ -18,7 +18,7 @@ public class Dulicatelead extends ProjectBase {
 		d.findElementByLinkText("Leads").click();
 		d.findElementByLinkText("Find Leads").click();
 		d.findElementByXPath("//span[text()='Email']").click();
-		d.findElementByXPath("//input[@name='emailAddress']").sendKeys("xxx@gmail.com");
+		d.findElementByXPath("//input[@name='emailAddress']").sendKeys("xxx1@gmail.com");
 		d.findElementByXPath("//button[text()='Find Leads']").click();
 		
 		Thread.sleep(5000);

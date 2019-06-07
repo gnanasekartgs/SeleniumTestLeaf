@@ -28,7 +28,7 @@ List<String> whs = new ArrayList<>();
 whs.addAll(windowHandles);
 d.switchTo().window(whs.get(1));
 
-d.findElementByXPath("//label[text()='Lead ID:']/following::input[1]").sendKeys("102");
+d.findElementByXPath("//label[text()='Lead ID:']/following::input[1]").sendKeys("100");
 d.findElementByXPath("//button[text()='Find Leads']").click();
 
 Thread.sleep(2000);

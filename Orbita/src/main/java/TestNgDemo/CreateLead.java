@@ -1,12 +1,8 @@
 package TestNgDemo;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,16 +13,16 @@ public class CreateLead extends ProjectBase {
 	@BeforeTest
 	public void setData()
 	{
-		excelfilename="TC001_Createlead";
+		excelfilename="Createlead";
 	}
 @Test(dataProvider="fetchData")
-	public void createLead(String cname, String fname, String lastname)
+	public void createLead(String cname, String fname, String lname)
 	{
 		System.out.println("1");
 		d.findElementByLinkText("Create Lead").click();		
 		d.findElementById("createLeadForm_companyName").sendKeys(cname);
 		d.findElementById("createLeadForm_firstName").sendKeys(fname);
-		d.findElementById("createLeadForm_lastName").sendKeys(lastname);
+		d.findElementById("createLeadForm_lastName").sendKeys(lname);
 		d.findElementByName("firstNameLocal").sendKeys("gnanasekar");
 		d.findElementByName("lastNameLocal").sendKeys("T");
 		d.findElementByName("personalTitle").sendKeys("MR");

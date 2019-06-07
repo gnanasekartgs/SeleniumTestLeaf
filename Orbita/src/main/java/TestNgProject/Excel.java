@@ -28,7 +28,7 @@ public class Excel {
 		{
 			XSSFRow row = sheet.getRow(i);
 			
-			for (int j = 0; j < colcount-1; j++)
+			for (int j = 0; j < colcount; j++)
 			{
 				XSSFCell cell = row.getCell(j);
 				String value = cell.getStringCellValue();
@@ -52,7 +52,7 @@ public class Excel {
 		public String[][] companyName(String excelfilename) throws IOException
 		{
 			XSSFWorkbook xwbook = new XSSFWorkbook("./testDate/"+excelfilename+".xlsx");
-			XSSFSheet sheetAt = xwbook.getSheetAt(0);
+			XSSFSheet sheetAt = xwbook.getSheetAt(2);
 			XSSFRow row = sheetAt.getRow(1);
 			int rownum = row.getRowNum();
 			System.out.println(rownum);

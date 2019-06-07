@@ -9,16 +9,17 @@ import org.testng.annotations.Test;
 
 public class EditLead extends ProjectBase {
 
-@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
-@BeforeTest
-public void setData()
-{
-	excelfilename="TC001_Createlead";
-}
-@Test(dataProvider="newCompanyName")
-public void editLead(String cname) throws InterruptedException {
+//@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
+//@BeforeTest
+//public void setData()
+//{
+//	excelfilename="Createlead";
+//}
+//@Test(dataProvider="newCompanyName")
+
+public void editLead() throws InterruptedException {
 	
-	System.out.println("2");
+System.out.println("2");
 d.findElementByLinkText("Leads").click();
 d.findElementByLinkText("Find Leads").click();
 d.findElementByXPath("//div[@class='x-tab-panel-bwrap']//div[2]//input").sendKeys("gnana");
@@ -39,7 +40,7 @@ else
 }
 d.findElementByXPath("//div[@class='frameSectionExtra']//a[3]").click();
 d.findElementById("updateLeadForm_companyName").clear();
-d.findElementById("updateLeadForm_companyName").sendKeys(cname);
+d.findElementById("updateLeadForm_companyName").sendKeys("ameexusa1");
 d.findElementByXPath("//input[@value='Update']").click();
 WebElement cn = d.findElementById("viewLead_companyName_sp");
 String attr = cn.getText();
@@ -52,8 +53,6 @@ if(newcn.equals("Ameexusa"))
 else
 {
 	System.out.println("not changed");
+}	
 }
-		
-	}
-
 }

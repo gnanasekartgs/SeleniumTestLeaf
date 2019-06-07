@@ -1,4 +1,5 @@
 package TestNgDemo;
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -9,11 +10,11 @@ import org.testng.annotations.Test;
 
 public class EditLead extends ProjectBase {
 
-@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
+//@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
 @BeforeTest
 public void setData()
 {
-	excelfilename="TC001_Createlead";
+	excelfilename="Createlead";
 }
 @Test(dataProvider="newCompanyName")
 public void editLead(String cname) throws InterruptedException {
