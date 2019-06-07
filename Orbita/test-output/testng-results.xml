@@ -2,16 +2,16 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="922" started-at="2019-06-07T04:41:33Z" finished-at="2019-06-07T04:41:34Z">
+  <suite name="Suite" duration-ms="847" started-at="2019-06-07T04:45:36Z" finished-at="2019-06-07T04:45:37Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="922" started-at="2019-06-07T04:41:33Z" finished-at="2019-06-07T04:41:34Z">
+    <test name="Test" duration-ms="847" started-at="2019-06-07T04:45:36Z" finished-at="2019-06-07T04:45:37Z">
       <class name="TestNgDemo.EditLead">
-        <test-method status="PASS" signature="setData()[pri:0, instance:TestNgDemo.EditLead@14bf9759]" name="setData" is-config="true" duration-ms="16" started-at="2019-06-07T04:41:33Z" finished-at="2019-06-07T04:41:33Z">
+        <test-method status="PASS" signature="setData()[pri:0, instance:TestNgDemo.EditLead@14bf9759]" name="setData" is-config="true" duration-ms="20" started-at="2019-06-07T04:45:36Z" finished-at="2019-06-07T04:45:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setData -->
-        <test-method status="SKIP" signature="editLead(java.lang.String)[pri:0, instance:TestNgDemo.EditLead@14bf9759]" name="editLead" duration-ms="0" started-at="2019-06-07T04:41:34Z" data-provider="newCompanyName" finished-at="2019-06-07T04:41:34Z">
+        <test-method status="SKIP" signature="editLead(java.lang.String)[pri:0, instance:TestNgDemo.EditLead@14bf9759]" name="editLead" duration-ms="0" started-at="2019-06-07T04:45:37Z" data-provider="newCompanyName" finished-at="2019-06-07T04:45:37Z">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>
