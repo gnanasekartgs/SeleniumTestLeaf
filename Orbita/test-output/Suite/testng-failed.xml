@@ -5,14 +5,13 @@
   <parameter name="username" value="demosalesmanager"/>
   <test thread-count="5" verbose="5" name="Test(failed)">
     <classes>
-      <class name="TestNgDemo.EditLead">
+      <class name="TestNgProject.Merge1">
         <methods>
-          <include name="launchApp"/>
+          <include name="mergeLead"/>
           <include name="close"/>
-          <include name="editLead"/>
-          <include name="setData"/>
+          <include name="launchApp"/>
         </methods>
-      </class> <!-- TestNgDemo.EditLead -->
+      </class> <!-- TestNgProject.Merge1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

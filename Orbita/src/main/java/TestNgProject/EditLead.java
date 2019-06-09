@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class EditLead extends ProjectBase {
 
-//@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
+@Test(dependsOnMethods= {"TestNgProject.CreateLead.createLead"}, alwaysRun=true)
 //@BeforeTest
 //public void setData()
 //{

@@ -43,7 +43,10 @@ List<String> whs1 = new ArrayList<>();
 whs1.addAll(windowHandles1);
 d.switchTo().window(whs1.get(1));
 
-d.findElementByXPath("//label[text()='Lead ID:']/following::input[1]").sendKeys("102");
+d.findElementByXPath("//label[text()='First name:']/following::input[1]").sendKeys("gnana");
+
+//d.findElementByXPath("//label[text()='Lead ID:']/following::input[1]").sendKeys("102");
+
 d.findElementByXPath("//button[text()='Find Leads']").click();
 
 Thread.sleep(5000);

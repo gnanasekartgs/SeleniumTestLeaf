@@ -23,7 +23,6 @@ d.findElementByXPath("(//label[text()='Phone Number:'])[4]/following::input[2]")
 d.findElementByXPath("(//label[text()='Phone Number:'])[4]/following::input[3]").sendKeys("4334143");
 d.findElementByXPath("//button[text()= 'Find Leads']").click();
 
-
 WebElement value = d.findElementByXPath("(//div[@class='x-grid3-row   '])[1]//tr[1]/td[1]//a");
 System.out.println(value.getAttribute("value"));
  

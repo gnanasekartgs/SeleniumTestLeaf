@@ -82,7 +82,7 @@ public class CreateLead extends ProjectBase {
 		dd6.selectByValue("CATRQ_AUTOMOBILE");
 		
 		d.findElementById("createLeadForm_primaryPhoneNumber").sendKeys("4334143");
-		d.findElementById("createLeadForm_primaryEmail").sendKeys("xxx@gmail.com");
+		d.findElementById("createLeadForm_primaryEmail").sendKeys("xxx1@gmail.com");
 		d.findElementByXPath("//input[@class='smallSubmit']").click();
 		
 		String fname1 = d.findElementByXPath("//span[text()='First name']//following::span[1]").getText();

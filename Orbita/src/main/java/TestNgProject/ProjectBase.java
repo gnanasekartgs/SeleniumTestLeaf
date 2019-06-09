@@ -1,6 +1,7 @@
 package TestNgProject;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -20,6 +21,7 @@ public class ProjectBase {
 	d = new ChromeDriver();
 	d.get("http://leaftaps.com/opentaps/control/main");
 	d.manage().window().maximize();
+	d.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	d.findElementById("username").sendKeys(uname);
 	d.findElementById("password").sendKeys(pword);
 	d.findElementByClassName("decorativeSubmit").click();

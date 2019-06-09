@@ -6,10 +6,12 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="TestNgProject.CreateLead"/>
-      <class name="TestNgProject.Dulicatelead"/>
-      <class name="TestNgProject.DeleteLead"/>
       <class name="TestNgProject.EditLead"/>
+      <class name="TestNgProject.Dulicatelead"/>
       <class name="TestNgProject.Merge1"/>
+      <class name="TestNgProject.DeleteLead"/>
+      
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

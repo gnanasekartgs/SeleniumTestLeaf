@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]">
-  <parameter name="password" value="crmsfa"/>
-  <parameter name="username" value="demosalesmanager"/>
-  <test thread-count="5" verbose="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNgDemo.EditLead">
+      <class name="runner.RunTest">
         <methods>
-          <include name="launchApp"/>
-          <include name="close"/>
-          <include name="editLead"/>
-          <include name="setData"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- TestNgDemo.EditLead -->
+      </class> <!-- runner.RunTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
