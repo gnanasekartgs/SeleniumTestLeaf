@@ -18,11 +18,11 @@ And Enter first name as <fname>
 And Enter last name as <lname> 
 When Click on submit button
 Then Verify Submit details 
+And Lead not created successfully
 But If not Submit
 
 Examples:
 |username|password|companyname|fname|lname|
 |demosalesmanager|crmsfa|ameex|gnana|tgs|
-|demosalesmanager|crmsfa|ameexusa|sekar|tgss|
 
 
