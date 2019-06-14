@@ -4,13 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class EditLead {
+public class EditLead 
+{
 public ChromeDriver d;
 
 @Given("Open the Chrome Browser")
@@ -24,7 +24,6 @@ public void openTheChromeBrowser()
 public void maximizeTheBrowser() 
 {
 		d.manage().window().maximize();
-
 }
 
 @And("Set the Timeouts")
@@ -53,14 +52,13 @@ public void loadTheURL() {
 		d.findElementByClassName("decorativeSubmit").click();
 	}
 
-	@Then("Verifiy login sucessfully")
+	@Then("Verify login sucessfully")
 	public void verifiyLoginSucessfully() {
 		String title = d.getTitle();
 		if(title.equals("Leaftaps - TestLeaf Automation Platform"))
 		{
 			System.out.println("correct");
 		}
-
 	}
 
 	@And("Click CRMSFA Button")
@@ -89,14 +87,16 @@ public void loadTheURL() {
 		}
 
 	@When("Select the First Lead name")
-	public void selectTheFirstLeadName() {
+	public void selectTheFirstLeadName() throws InterruptedException
+	{	
+		Thread.sleep(5000);
 		d.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-firstName']//a)[1]").click();
 		}
 
-	@Then("Verifiy the PageTitle")
-	public void verifiyThePageTitle(String pagetitle) {
+	@Then("Verify the PageTitle")
+	public void verifiyThePageTitle() {
 		String title = d.getTitle();
-		if(title.equals(pagetitle))
+		if(title.equals("View Lead | opentaps CRM"))
 		{
 			System.out.println("title correct");
 		}
@@ -104,77 +104,80 @@ public void loadTheURL() {
 		{
 			System.out.println("not equal");
 		}
-
 	}
 
 	@And("Select the CompanyName Field")
-	public void selectTheCompanyNameField() {
+	public void selectTheCompanyNameField() 
+	{
 		d.findElementByXPath("//div[@class='frameSectionExtra']//a[3]").click();
 		d.findElementById("updateLeadForm_companyName").clear();
 	}
 
 	@And("Enter the CompanyName as (.*)")
-	public void enterTheCompanyNameAsAmeexusa(String cname) {
+	public void enterTheCompanyNameAsAmeexusa(String cname) 
+	{
 		d.findElementById("updateLeadForm_companyName").sendKeys(cname);
 	}
 
 	@When("Select the Update")
-	public void selectTheUpdate() {
+	public void selectTheUpdate() 
+	{
 		d.findElementByXPath("//input[@value='Update']").click();
+		d.close();
 		}
 
-	@Then("Verifiy the changes as (.*)")
-	public void verifiyTheChanges() {
-		WebElement cn = d.findElementById("viewLead_companyName_sp");
-		String attr = cn.getText();
-		String newcn = attr.substring(0, 8);
-		System.out.println(newcn);
-		if(newcn.equals("Ameexusa"))
-		{
-			System.out.println("company name changed");
-		}
-		else
-		{
-			System.out.println("not changed");
-		}
+//	@Then("Verify the changes as (.*)")
+//	public void verifiyTheChanges() {
+//		WebElement cn = d.findElementById("viewLead_companyName_sp");
+//		String attr = cn.getText();
+//		String newcn = attr.substring(0, 8);
+//		System.out.println(newcn);
+//		if(newcn.equals("Ameexusa"))
+//		{
+//			System.out.println("company name changed");
+//		}
+//		else
+//		{
+//			System.out.println("not changed");
+//		}
 
 	}
 
-	@And("Enter the wusername as (.*)")
-	public void enterTheUsernameAsDemosalesmanager(String uname) {
-		d.findElementById("username").sendKeys(uname);
-	}
-
-	@And("Enter the wpassword as (.*)")
-	public void enterThePasswordAsPasswrod(String pwd) {
-		d.findElementById("password").sendKeys(pwd);}
-
-	@When("click the wlogin button")
-	public void clickThewLoginButton() {
-		d.findElementByClassName("decorativeSubmit").click();
-	}
+//	@And("Enter the wusername as (.*)")
+//	public void enterTheUsernameAsDemosalesmanager(String uname) {
+//		d.findElementById("username").sendKeys(uname);
+//	}
+//
+//	@And("Enter the wpassword as (.*)")
+//	public void enterThePasswordAsPasswrod(String pwd) {
+//		d.findElementById("password").sendKeys(pwd);}
+//
+//	@When("click the wlogin button")
+//	public void clickThewLoginButton() {
+//		d.findElementByClassName("decorativeSubmit").click();
+//	}
+//	
+//	@Then("Verifiy login Failures")
+//	public void verifiyLoginFailures() {
+//		String title = d.getTitle();
+//		if(title.equals("Leaftaps - TestLeaf Automation Platform"))
+//		{
+//			System.out.println("correct");
+//		}
+//		else
+//		{
+//			System.out.println("Incorrect");
+//	}
+//	}
+//
+//	@Then("User entered Wrong Crediential")
+//	public void userEnteredWrongCrediential() {
+//	    System.out.println("Please enter correct credential");
+//	}
+//
+//	@Then("Credentials are wrong")
+//	public void credentialsAreWrong() {
+//System.out.println("wrong password");
+//	}
 	
-	@Then("Verifiy login Failures")
-	public void verifiyLoginFailures() {
-		String title = d.getTitle();
-		if(title.equals("Leaftaps - TestLeaf Automation Platform"))
-		{
-			System.out.println("correct");
-		}
-		else
-		{
-			System.out.println("Incorrect");
-	}
-	}
 
-	@Then("User entered Wrong Crediential")
-	public void userEnteredWrongCrediential() {
-	    System.out.println("Please enter correct credential");
-	}
-
-	@Then("Credentials are wrong")
-	public void credentialsAreWrong() {
-System.out.println("wrong password");
-	}
-	
-}

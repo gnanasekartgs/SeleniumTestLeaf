@@ -1,10 +1,10 @@
 Feature: Leaftaps Login
 
 Background:
-Given Open the Chrome Browser
-And Maximize the Browser
-And Set the Timeouts
-And Load the URL
+Given Open the Chrome Browser1
+And Maximize the Browser1
+And Set the Timeouts1
+And Load the URL1
 
 Scenario Outline: TC001_CreateLead Positive Flow
 And Enter the Username as <username>

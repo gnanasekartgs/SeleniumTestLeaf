@@ -14,27 +14,27 @@ public class LoginSteps
 {
 public ChromeDriver d;
 	
-	@Given("Open the Chrome Browser")
+	@Given("Open the Chrome Browser1")
 	public void openTheChromeBrowser() 
 	{
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		d = new ChromeDriver();	
 		}
 
-	@And("Maximize the Browser")
+	@And("Maximize the Browser1")
 	public void maximizeTheBrowser() 
 	{
 			d.manage().window().maximize();
 
 	}
 
-	@And("Set the Timeouts")
+	@And("Set the Timeouts1")
 	public void setTheTimeouts() 
 	{
 		d.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 
-	@And("Load the URL")
+	@And("Load the URL1")
 	public void loadTheURL() {
 		d.get("http://leaftaps.com/opentaps/control/main");
 		}
