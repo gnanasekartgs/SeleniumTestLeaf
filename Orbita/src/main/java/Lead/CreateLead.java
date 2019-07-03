@@ -1,20 +1,31 @@
 package Lead;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreateLead {
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws InterruptedException {
+		long startTime = System.currentTimeMillis();
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver d = new ChromeDriver();
 		d.get("http://leaftaps.com/opentaps/");
 		d.manage().window().maximize();
+		//d.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//Thread.sleep(5000);
 
+		
 		d.findElementById("username").sendKeys("demosalesmanager");
 		d.findElementById("password").sendKeys("crmsfa");
+
+		WebDriverWait wait = new WebDriverWait(d, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.className("decorativeSubmit")));
 		d.findElementByClassName("decorativeSubmit").click();
 		
 		d.findElementByLinkText("CRM/SFA").click();
@@ -27,7 +38,7 @@ public class CreateLead {
 		d.findElementByName("firstNameLocal").sendKeys("gnanasekar");
 		d.findElementByName("lastNameLocal").sendKeys("T");
 		d.findElementByName("personalTitle").sendKeys("MR");
-		
+		/*
 		WebElement source = d.findElementById("createLeadForm_dataSourceId");
 		Select dd = new Select(source);
 		dd.selectByValue("LEAD_PARTNER");
@@ -91,7 +102,9 @@ public class CreateLead {
 		else
 		{
 			System.out.println("sekar");
-		}
+		}*/
 	d.close();
+	long endTime = System.currentTimeMillis();
+	System.out.println("Took "+(endTime - startTime) + " ms"); 
 	}
 }
