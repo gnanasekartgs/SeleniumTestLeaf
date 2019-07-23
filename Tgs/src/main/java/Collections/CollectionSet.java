@@ -17,6 +17,7 @@ public class CollectionSet {
 	{	
 		List<String> st = new ArrayList<>();
 		//Set<String> st = new HashSet<>();
+		//Set<String> st = new HashSet<>();
 		st.add("sekar");
 		st.add("sai");
 		st.add("sandy");
