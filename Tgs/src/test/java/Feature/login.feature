@@ -23,6 +23,6 @@ But If not Submit
 
 Examples:
 |username|password|companyname|fname|lname|
-|demosalesmanager|crmsfa|ameex|gnana|tgs|
+|demosalesmanager|crmsfa|all|gnana|tgs|
 
 

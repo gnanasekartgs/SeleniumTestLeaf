@@ -25,5 +25,5 @@ Then Select the Update
 Examples: 
 
 |username|password|companyname|
-|demosalesmanager|crmsfa|Ameexusa|
-|demosalesmanager|crmsfa|Ameexusa|
+|demosalesmanager|crmsfa|allusa|
+|demosalesmanager|crmsfa|allusa|

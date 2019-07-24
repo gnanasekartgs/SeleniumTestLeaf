@@ -18,7 +18,7 @@ public class Flipkart_FF {
 		driver.manage().window().maximize();
 		
 		driver.findElementByXPath("//input[@class='_2zrpKA _1dBPDZ']").sendKeys("gnanasekar69@gmail.com");
-		driver.findElementByXPath("//input[@type='password']").sendKeys("9994551183@Psk");
+		driver.findElementByXPath("//input[@type='password']").sendKeys("");
 		driver.findElementByXPath("//button[@class='_2AkmmA _1LctnI _7UHT_c']").click();
 		WebElement search = driver.findElementByXPath("//input[@title='Search for products, brands and more']");		
 		search.sendKeys("selenium book", Keys.ENTER);

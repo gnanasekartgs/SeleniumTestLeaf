@@ -34,7 +34,7 @@ public class CreateLead extends ProjectBase {
 		Select dd = new Select(source);
 		dd.selectByValue("LEAD_PARTNER");
 		
-		d.findElementById("createLeadForm_generalProfTitle").sendKeys("Ameex");
+		d.findElementById("createLeadForm_generalProfTitle").sendKeys("all");
 		d.findElementById("createLeadForm_annualRevenue").sendKeys("100000");
 		
 		WebElement ind = d.findElementById("createLeadForm_industryEnumId");

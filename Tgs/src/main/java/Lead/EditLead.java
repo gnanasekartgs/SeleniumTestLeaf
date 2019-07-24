@@ -37,13 +37,13 @@ else
 }
 d.findElementByXPath("//div[@class='frameSectionExtra']//a[3]").click();
 d.findElementById("updateLeadForm_companyName").clear();
-d.findElementById("updateLeadForm_companyName").sendKeys("Ameexusa");
+d.findElementById("updateLeadForm_companyName").sendKeys("allusa");
 d.findElementByXPath("//input[@value='Update']").click();
 WebElement cn = d.findElementById("viewLead_companyName_sp");
 String attr = cn.getText();
 String newcn = attr.substring(0, 8);
 System.out.println(newcn);
-if(newcn.equals("Ameexusa"))
+if(newcn.equals("allusa"))
 {
 	System.out.println("company name changed");
 }

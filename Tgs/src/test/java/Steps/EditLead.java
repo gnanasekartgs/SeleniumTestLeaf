@@ -114,7 +114,7 @@ public void loadTheURL() {
 	}
 
 	@And("Enter the CompanyName as (.*)")
-	public void enterTheCompanyNameAsAmeexusa(String cname) 
+	public void enterTheCompanyNameAsallusa(String cname) 
 	{
 		d.findElementById("updateLeadForm_companyName").sendKeys(cname);
 	}
@@ -132,7 +132,7 @@ public void loadTheURL() {
 //		String attr = cn.getText();
 //		String newcn = attr.substring(0, 8);
 //		System.out.println(newcn);
-//		if(newcn.equals("Ameexusa"))
+//		if(newcn.equals("allusa"))
 //		{
 //			System.out.println("company name changed");
 //		}

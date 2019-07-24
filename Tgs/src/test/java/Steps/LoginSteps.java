@@ -75,7 +75,7 @@ public ChromeDriver d;
 			}
 
 	@And("Enter company name as (.*)")
-	public void enterCompanyNameAsAmeex(String companyname) {
+	public void enterCompanyNameAsall(String companyname) {
 		d.findElementById("createLeadForm_companyName").sendKeys(companyname);
 		}
 

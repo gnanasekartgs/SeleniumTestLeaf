@@ -32,7 +32,7 @@ public class CreateLead {
 		
 		d.findElementByLinkText("Create Lead").click();
 		
-		d.findElementById("createLeadForm_companyName").sendKeys("ameex");
+		d.findElementById("createLeadForm_companyName").sendKeys("all");
 		d.findElementById("createLeadForm_firstName").sendKeys("gnana");
 		d.findElementById("createLeadForm_lastName").sendKeys("sekar");
 		d.findElementByName("firstNameLocal").sendKeys("gnanasekar");
@@ -43,7 +43,7 @@ public class CreateLead {
 		Select dd = new Select(source);
 		dd.selectByValue("LEAD_PARTNER");
 		
-		d.findElementById("createLeadForm_generalProfTitle").sendKeys("Ameex");
+		d.findElementById("createLeadForm_generalProfTitle").sendKeys("all");
 		d.findElementById("createLeadForm_annualRevenue").sendKeys("100000");
 		
 		WebElement ind = d.findElementById("createLeadForm_industryEnumId");

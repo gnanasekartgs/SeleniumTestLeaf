@@ -18,7 +18,7 @@ public static void main(String[] args) {
 	
 	driver.findElementByLinkText("CRM/SFA").click();
 	driver.findElementByLinkText("Create Lead").click();
-	driver.findElementById("createLeadForm_companyName").sendKeys("ameex");
+	driver.findElementById("createLeadForm_companyName").sendKeys("all");
 	driver.findElementById("createLeadForm_firstName").sendKeys("gnana");
 	driver.findElementById("createLeadForm_lastName").sendKeys("sekar");
 	

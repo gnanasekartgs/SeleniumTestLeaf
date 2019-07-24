@@ -51,9 +51,9 @@ public class Irctc {
 				Select country1 = new Select(country);
 				country1.selectByVisibleText("India");
 				
-				d.findElementById("userRegistrationForm:email").sendKeys("gnanatesting.ameex@gmail.com");
+				d.findElementById("userRegistrationForm:email").sendKeys("gnanatestcom");
 				//d.findElementById("userRegistrationForm:isdCode").sendKeys("+91");
-				d.findElementById("userRegistrationForm:mobile").sendKeys("9994551183");
+				d.findElementById("userRegistrationForm:mobile").sendKeys("9");
 				
 				WebElement nationality = d.findElementById("userRegistrationForm:nationalityId");
 				Select nation = new Select(nationality);

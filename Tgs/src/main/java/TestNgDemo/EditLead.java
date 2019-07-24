@@ -46,7 +46,7 @@ WebElement cn = d.findElementById("viewLead_companyName_sp");
 String attr = cn.getText();
 String newcn = attr.substring(0, 8);
 System.out.println(newcn);
-if(newcn.equals("Ameexusa"))
+if(newcn.equals("allusa"))
 {
 	System.out.println("company name changed");
 }

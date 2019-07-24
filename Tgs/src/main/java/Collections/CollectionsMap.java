@@ -14,7 +14,7 @@ public class CollectionsMap {
 	}
 	public static void learnMap()
 	{
-		String name = "ameex";
+		String name = "all";
 		char[] array = name.toCharArray();	
 		Map<Character, Integer> map = new LinkedHashMap<>();
 		for(char eachchar : array)

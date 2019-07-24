@@ -21,7 +21,7 @@ public class Facebook {
 	//	d.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		d.findElementByXPath("(//input[@class='inputtext'])[1]").sendKeys("gnanasekar69");
-		d.findElementByXPath("(//input[@type='password'])[1]").sendKeys("9345444780@Home");
+		d.findElementByXPath("(//input[@type='password'])[1]").sendKeys("");
 		d.findElementByXPath("(//input[@value='Log In'])").click();
 
 		
