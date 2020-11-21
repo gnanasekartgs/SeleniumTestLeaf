@@ -1,56 +1,419 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51811" started-at="2019-06-14T04:34:00Z" finished-at="2019-06-14T04:34:52Z">
+  <suite started-at="2020-06-06T11:49:30Z" name="Suite" finished-at="2020-06-06T11:49:33Z" duration-ms="3235">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.EditRunTest@31a5c39e]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="51811" started-at="2019-06-14T04:34:00Z" finished-at="2019-06-14T04:34:52Z">
-      <class name="runner.EditRunTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.EditRunTest@31a5c39e]" name="setUpClass" is-config="true" duration-ms="160" started-at="2019-06-14T04:34:00Z" finished-at="2019-06-14T04:34:00Z">
+    <test started-at="2020-06-06T11:49:30Z" name="Test" finished-at="2020-06-06T11:49:33Z" duration-ms="3235">
+      <class name="TestNgProject.CreateLead">
+        <test-method is-config="true" signature="setData()[pri:0, instance:TestNgProject.CreateLead@5609159b]" started-at="2020-06-06T11:49:30Z" name="setData" finished-at="2020-06-06T11:49:30Z" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.EditRunTest@31a5c39e]" name="runScenario" duration-ms="22836" started-at="2019-06-14T04:34:00Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-06-14T04:34:23Z">
+        </test-method> <!-- setData -->
+        <test-method is-config="true" signature="launchApp(java.lang.String, java.lang.String)[pri:0, instance:TestNgProject.CreateLead@5609159b]" started-at="2020-06-06T11:49:31Z" name="launchApp" finished-at="2020-06-06T11:49:33Z" duration-ms="2200" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["EditLead Positive Flow"]]>
+                <![CDATA[demosalesmanager]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Rename Companyname"]]>
+                <![CDATA[crmsfa]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[session not created: This version of ChromeDriver only supports Chrome version 75
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AMX-RL-19-255-W', ip: '192.168.43.221', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00D71B23+1448739]
+Ordinal0 [0x00CF5A11+940561]
+Ordinal0 [0x00C82293+467603]
+Ordinal0 [0x00C1F27E+62078]
+Ordinal0 [0x00C1BBBD+48061]
+Ordinal0 [0x00C38D19+167193]
+Ordinal0 [0x00C388ED+166125]
+Ordinal0 [0x00C36FFB+159739]
+Ordinal0 [0x00C209F6+68086]
+Ordinal0 [0x00C21990+72080]
+Ordinal0 [0x00C21929+71977]
+GetHandleVerifier [0x00EB2E4C+1172140]
+GetHandleVerifier [0x00E0FE35+504469]
+GetHandleVerifier [0x00E0FBD0+503856]
+Ordinal0 [0x00D7C9A8+1493416]
+GetHandleVerifier [0x00E1060A+506474]
+Ordinal0 [0x00D07136+1012022]
+Ordinal0 [0x00D06FAF+1011631]
+Ordinal0 [0x00D1133B+1053499]
+Ordinal0 [0x00D114A3+1053859]
+Ordinal0 [0x00D104D5+1049813]
+BaseThreadInitThunk [0x74C36359+25]
+RtlGetAppContainerNamedObjectPath [0x77437B74+228]
+RtlGetAppContainerNamedObjectPath [0x77437B44+180]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 75
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AMX-RL-19-255-W', ip: '192.168.43.221', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00D71B23+1448739]
+Ordinal0 [0x00CF5A11+940561]
+Ordinal0 [0x00C82293+467603]
+Ordinal0 [0x00C1F27E+62078]
+Ordinal0 [0x00C1BBBD+48061]
+Ordinal0 [0x00C38D19+167193]
+Ordinal0 [0x00C388ED+166125]
+Ordinal0 [0x00C36FFB+159739]
+Ordinal0 [0x00C209F6+68086]
+Ordinal0 [0x00C21990+72080]
+Ordinal0 [0x00C21929+71977]
+GetHandleVerifier [0x00EB2E4C+1172140]
+GetHandleVerifier [0x00E0FE35+504469]
+GetHandleVerifier [0x00E0FBD0+503856]
+Ordinal0 [0x00D7C9A8+1493416]
+GetHandleVerifier [0x00E1060A+506474]
+Ordinal0 [0x00D07136+1012022]
+Ordinal0 [0x00D06FAF+1011631]
+Ordinal0 [0x00D1133B+1053499]
+Ordinal0 [0x00D114A3+1053859]
+Ordinal0 [0x00D104D5+1049813]
+BaseThreadInitThunk [0x74C36359+25]
+RtlGetAppContainerNamedObjectPath [0x77437B74+228]
+RtlGetAppContainerNamedObjectPath [0x77437B44+180]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at TestNgProject.ProjectBase.launchApp(ProjectBase.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.EditRunTest@31a5c39e]" name="runScenario" duration-ms="28726" started-at="2019-06-14T04:34:23Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-06-14T04:34:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["EditLead Positive Flow"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Rename Companyname"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchApp -->
+        <test-method signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNgProject.CreateLead@5609159b]" started-at="2020-06-06T11:49:33Z" name="createLead" data-provider="fetchData" finished-at="2020-06-06T11:49:33Z" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[session not created: This version of ChromeDriver only supports Chrome version 75
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AMX-RL-19-255-W', ip: '192.168.43.221', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00D71B23+1448739]
+Ordinal0 [0x00CF5A11+940561]
+Ordinal0 [0x00C82293+467603]
+Ordinal0 [0x00C1F27E+62078]
+Ordinal0 [0x00C1BBBD+48061]
+Ordinal0 [0x00C38D19+167193]
+Ordinal0 [0x00C388ED+166125]
+Ordinal0 [0x00C36FFB+159739]
+Ordinal0 [0x00C209F6+68086]
+Ordinal0 [0x00C21990+72080]
+Ordinal0 [0x00C21929+71977]
+GetHandleVerifier [0x00EB2E4C+1172140]
+GetHandleVerifier [0x00E0FE35+504469]
+GetHandleVerifier [0x00E0FBD0+503856]
+Ordinal0 [0x00D7C9A8+1493416]
+GetHandleVerifier [0x00E1060A+506474]
+Ordinal0 [0x00D07136+1012022]
+Ordinal0 [0x00D06FAF+1011631]
+Ordinal0 [0x00D1133B+1053499]
+Ordinal0 [0x00D114A3+1053859]
+Ordinal0 [0x00D104D5+1049813]
+BaseThreadInitThunk [0x74C36359+25]
+RtlGetAppContainerNamedObjectPath [0x77437B74+228]
+RtlGetAppContainerNamedObjectPath [0x77437B44+180]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 75
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AMX-RL-19-255-W', ip: '192.168.43.221', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00D71B23+1448739]
+Ordinal0 [0x00CF5A11+940561]
+Ordinal0 [0x00C82293+467603]
+Ordinal0 [0x00C1F27E+62078]
+Ordinal0 [0x00C1BBBD+48061]
+Ordinal0 [0x00C38D19+167193]
+Ordinal0 [0x00C388ED+166125]
+Ordinal0 [0x00C36FFB+159739]
+Ordinal0 [0x00C209F6+68086]
+Ordinal0 [0x00C21990+72080]
+Ordinal0 [0x00C21929+71977]
+GetHandleVerifier [0x00EB2E4C+1172140]
+GetHandleVerifier [0x00E0FE35+504469]
+GetHandleVerifier [0x00E0FBD0+503856]
+Ordinal0 [0x00D7C9A8+1493416]
+GetHandleVerifier [0x00E1060A+506474]
+Ordinal0 [0x00D07136+1012022]
+Ordinal0 [0x00D06FAF+1011631]
+Ordinal0 [0x00D1133B+1053499]
+Ordinal0 [0x00D114A3+1053859]
+Ordinal0 [0x00D104D5+1049813]
+BaseThreadInitThunk [0x74C36359+25]
+RtlGetAppContainerNamedObjectPath [0x77437B74+228]
+RtlGetAppContainerNamedObjectPath [0x77437B44+180]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at TestNgProject.ProjectBase.launchApp(ProjectBase.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.EditRunTest@31a5c39e]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2019-06-14T04:34:52Z" finished-at="2019-06-14T04:34:52Z">
+        </test-method> <!-- createLead -->
+        <test-method is-config="true" signature="close()[pri:0, instance:TestNgProject.CreateLead@5609159b]" started-at="2020-06-06T11:49:33Z" name="close" finished-at="2020-06-06T11:49:33Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.EditRunTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="launchApp(java.lang.String, java.lang.String)[pri:0, instance:TestNgProject.CreateLead@5609159b]" started-at="2020-06-06T11:49:33Z" name="launchApp" finished-at="2020-06-06T11:49:33Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="createLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNgProject.CreateLead@5609159b]" started-at="2020-06-06T11:49:33Z" name="createLead" data-provider="fetchData" finished-at="2020-06-06T11:49:33Z" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[session not created: This version of ChromeDriver only supports Chrome version 75
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AMX-RL-19-255-W', ip: '192.168.43.221', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00D71B23+1448739]
+Ordinal0 [0x00CF5A11+940561]
+Ordinal0 [0x00C82293+467603]
+Ordinal0 [0x00C1F27E+62078]
+Ordinal0 [0x00C1BBBD+48061]
+Ordinal0 [0x00C38D19+167193]
+Ordinal0 [0x00C388ED+166125]
+Ordinal0 [0x00C36FFB+159739]
+Ordinal0 [0x00C209F6+68086]
+Ordinal0 [0x00C21990+72080]
+Ordinal0 [0x00C21929+71977]
+GetHandleVerifier [0x00EB2E4C+1172140]
+GetHandleVerifier [0x00E0FE35+504469]
+GetHandleVerifier [0x00E0FBD0+503856]
+Ordinal0 [0x00D7C9A8+1493416]
+GetHandleVerifier [0x00E1060A+506474]
+Ordinal0 [0x00D07136+1012022]
+Ordinal0 [0x00D06FAF+1011631]
+Ordinal0 [0x00D1133B+1053499]
+Ordinal0 [0x00D114A3+1053859]
+Ordinal0 [0x00D104D5+1049813]
+BaseThreadInitThunk [0x74C36359+25]
+RtlGetAppContainerNamedObjectPath [0x77437B74+228]
+RtlGetAppContainerNamedObjectPath [0x77437B44+180]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 75
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AMX-RL-19-255-W', ip: '192.168.43.221', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00D71B23+1448739]
+Ordinal0 [0x00CF5A11+940561]
+Ordinal0 [0x00C82293+467603]
+Ordinal0 [0x00C1F27E+62078]
+Ordinal0 [0x00C1BBBD+48061]
+Ordinal0 [0x00C38D19+167193]
+Ordinal0 [0x00C388ED+166125]
+Ordinal0 [0x00C36FFB+159739]
+Ordinal0 [0x00C209F6+68086]
+Ordinal0 [0x00C21990+72080]
+Ordinal0 [0x00C21929+71977]
+GetHandleVerifier [0x00EB2E4C+1172140]
+GetHandleVerifier [0x00E0FE35+504469]
+GetHandleVerifier [0x00E0FBD0+503856]
+Ordinal0 [0x00D7C9A8+1493416]
+GetHandleVerifier [0x00E1060A+506474]
+Ordinal0 [0x00D07136+1012022]
+Ordinal0 [0x00D06FAF+1011631]
+Ordinal0 [0x00D1133B+1053499]
+Ordinal0 [0x00D114A3+1053859]
+Ordinal0 [0x00D104D5+1049813]
+BaseThreadInitThunk [0x74C36359+25]
+RtlGetAppContainerNamedObjectPath [0x77437B74+228]
+RtlGetAppContainerNamedObjectPath [0x77437B44+180]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at TestNgProject.ProjectBase.launchApp(ProjectBase.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method is-config="true" signature="close()[pri:0, instance:TestNgProject.CreateLead@5609159b]" started-at="2020-06-06T11:49:33Z" name="close" finished-at="2020-06-06T11:49:33Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- TestNgProject.CreateLead -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

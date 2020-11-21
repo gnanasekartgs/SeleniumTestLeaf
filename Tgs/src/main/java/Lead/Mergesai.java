@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class Mergesai {
 	
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\eclipse\\workspace\\Selenium\\Drivers\\chromedriver.exe");
 		ChromeDriver d = new ChromeDriver();
 		d.get("http://leaftaps.com/opentaps/control/main");
 		d.manage().window().maximize();
@@ -53,7 +53,8 @@ public class Mergesai {
 
 		d.findElementByXPath("(//input[@class='XdijitInputField dijitInputFieldValidationNormal'])[2]").sendKeys(mergeTo);
 		d.findElementByLinkText("Merge").click();
-
+		
+		
 		d.switchTo().alert().accept();
 		d.switchTo().defaultContent();		
 		d.findElementByLinkText("Find Leads").click();

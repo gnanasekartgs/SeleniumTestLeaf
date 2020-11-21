@@ -55,6 +55,6 @@
 		</dependency>
 	</dependencies>
   <packaging>war</packaging>
-  <name>New Orbita</name>
-  <description>New orbita project</description>
+  <name>New Orbit</name>
+  <description>New orbit project</description>
 </project>
