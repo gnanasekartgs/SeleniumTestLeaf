@@ -91,7 +91,7 @@ public class CreateLead {
 		dd6.selectByValue("CATRQ_AUTOMOBILE");
 		
 		d.findElementById("createLeadForm_primaryPhoneNumber").sendKeys("4334143");
-		d.findElementById("createLeadForm_primaryEmail").sendKeys("xxx1@gmail.com");
+		d.findElementById("createLeadForm_primaryEmail").sendKeys("xxx1@gmail.com");*/
 		d.findElementByXPath("//input[@class='smallSubmit']").click();
 		
 		String fname = d.findElementByXPath("//span[text()='First name']//following::span[1]").getText();
@@ -102,7 +102,7 @@ public class CreateLead {
 		else
 		{
 			System.out.println("sekar");
-		}*/
+		}
 	d.close();
 	long endTime = System.currentTimeMillis();
 	System.out.println("Took "+(endTime - startTime) + " ms"); 
